@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="mainDiv">
+      <form onsubmit="validation(event)" id="mainForm">
+        <label for="fullname">Enter Your Name</label>
+        <br />
+        <input type="text" name="fullname" id="name1" />
+        <br /><br />
+        <label for="" name="mobile">Enter Your Mobile No</label>
+        <br />
+        <input type="text" name="mobile" id="mobile" maxlength="10" />
+        <br /><br />
+        <label for="">pick your fav color</label>
+        <br />
+        <input type="color" name="color" id="" />
+        <br /><br />
+        <label for="">select your gender</label>
+        <br />
+        <input type="radio" name="gender" id="male" value="male"/>
+        <label for="male">male</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">female</label>
+        <br /><br />
+        <label for=" genre">select your fav music</label>
+        <br />
+        <select name="music" id="">
+          <option value="empty">select your choice</option>
+          <option value="pop music">pop music</option>
+          <option value="soothing">soothing music</option>
+          <option value="old is gold">old is gold music</option>
+        </select>
+        <br /><br />
+        <label for="">type your messaage</label>
+        <br />
+        <textarea name="textarea" id="message" cols="30" rows="8"></textarea>
+        <br /><br />
+        <label for="">your known programming languages</label>
+        <br />
+        <input type="checkbox" name="programming" id="" value="javascript" />
+        <label for="">JavaScript</label>
+        <input type="checkbox" name="programming" id="" value="python" />
+        <label for="">Python</label>
+        <input type="checkbox" name="programming" id="" value="java" />
+        <label for="">Java</label>
+        <br /><br />
+        <label for="">price range</label>
+        <br />
+        <input
+          type="range"
+          name="range"
+          id=""
+          min="200"
+          max="10000"
+          value="2500"
+        />
+        <button type="submit">submit</button>
+      </form>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
