@@ -1,11 +1,14 @@
 function validation(e) {
   e.preventDefault();
-  console.log(e);
   let languagesArr = [];
   let radioArr = [];
-  // name validation
   if (e.target.name1.value.includes(" ")) {
-    alert("do not use space");
+    alert("Enter Valid Name Without Space");
+    return false;
+  }
+
+  if (e.target.name1.value=="") {
+    alert("Name Can't be Empty");
     return false;
   }
 
@@ -14,15 +17,35 @@ function validation(e) {
     alert("use Numeric value");
     return false;
   }
-  if (e.target.mobile.value.length<10) {
-    alert("Nut 10 values");
+  if (e.target.mobile.value=="") {
+    alert("Mobile number can't be empty");
     return false;
   }
 
+  if (e.target.mobile.value.length<10) {
+    alert("Please Enter a valid Number");
+    return false;
+  }
+
+  //  Email validation
+  if (!e.target.email.value.includes('@')) {
+    alert("Not Right Email");
+    return false;
+  }
+  if (!e.target.email.value.includes('.')) {
+    alert("Not Right Email");
+    return false;
+  }
   // Message Validation
   if (e.target.message.value == "") {
     alert("Please Enter Message");
     return false;
+  }
+
+  // Fav Music Validation
+  if(!e.target.music.value){
+    alert("Please Select Your Fav Music Category");
+    return true;
   }
 
   // Radio and CheckBox Validation
